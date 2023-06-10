@@ -1,0 +1,23 @@
+Let's go through the algorithm of the code step by step:
+
+1. Read the number of test cases using `int(input())` and iterate `i` over the range of test cases.
+
+2. Read the binary string `st` for the current test case.
+
+3. Initialize an empty set `A` to store the equivalence classes.
+
+4. Iterate `i` over the range of the length of the string `st`.
+
+5. Initialize variables `ct`, `even`, and `odd` to 0. These variables will be used to count the number of '1' characters, even '1' counts, and odd '1' counts in each substring.
+
+6. Iterate `j` over the range from `i` to the length of the string `st`. This represents the ending index of the current substring.
+
+7. Check if the character at index `j` in the string `st` is '1'. If it is, increment the `ct` variable to count the number of '1' characters.
+
+8. If the character is not '1', check if the count `ct` is even. If it is, increment the `even` counter; otherwise, increment the `odd` counter.
+
+9. Add the tuple `(j-i+1, even, odd)` to the set `A`. The tuple represents the length of the substring (`j-i+1`), the count of even '1' characters (`even`), and the count of odd '1' characters (`odd`).
+
+10. After iterating over all possible substrings, print the length of the set `A`, which represents the number of equivalence classes among the substrings of the given string `st`.
+
+11. Clear the set `A` to prepare for the next test case.
