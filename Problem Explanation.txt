@@ -1,0 +1,21 @@
+This problem involves finding the number of equivalence classes among the substrings of a binary string. Two strings A and B are considered equivalent if they have the same lengths and A can be transformed into B by performing zero or more operations of reversing a substring that contains '1' an even number of times.
+
+To solve this problem, we can use the following approach:
+
+1. Read the integer T from input, which represents the number of test cases.
+
+2. Iterate T times to process each test case.
+
+3. For each test case, read the binary string S from input.
+
+4. Initialize a set C to store the equivalence classes of substrings.
+
+5. Iterate over all possible substrings of S. For each substring R, do the following steps:
+
+   a. Initialize a counter variable cnt to count the number of '1' characters in R.
+   
+   b. If cnt is even, add the substring R to the set C.
+   
+6. Print the size of the set C, which represents the number of equivalence classes among the substrings of S.
+
+
